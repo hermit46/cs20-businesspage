@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Contact Us - Barkers @ Somerville Inc.</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <meta name = 'viewport' content = "width=device-width, initialscale=1">
+  <link rel="stylesheet" href="styles.css">
+
+<body>
+        <div class = header>
+            <div class = index-header>
+            Connect with the community at Barkers!
+            </div>  
+        </div>
+
+    <nav>
+        <a href = "index.html"> Home</a>
+        <a href = "services.html"> Services</a>
+        <a href = "contactus.html"> Contact Us</a>
+    </nav><p></p>
+    <form>
+        <div id = 'feedback' style="position:absolute; top:100px;">
+            <input type="text" placeholder="Name" /><p></p>
+            <input type="text" placeholder="Contact No."/><p></p>
+            <input type="text" placeholder="Email Address"/><p></p>
+
+            <strong>Connect with Us!</strong><p></p>
+            <textarea id="details" placeholder ="Want to learn more about Barkers? Have a concern? Write it down here!" 
+            id="details" name="details" rows ="4" cols ="50"></textarea>
+            <p></p>
+            <!-- <input type ="submit" value="Submit"/> -->
+            <button id="submitFeedback">Submit</button>
+
+
+        </div>
+
+        <div id = 'thank-you' style = 'display:none; position:absolute; top:100px;'>
+            <p> Thanks for filling up the form!</p>
+            <button type ="submit">Close</button>
+        </div>
+    </form>
+</body>
+
+<script async>
+    var submitFeedback = document.querySelector('#submitFeedback');
+
+    submitFeedback.addEventListener('click', function(e) {
+        e.preventDefault();
+        // This hides the first view
+        document.getElementById('feedback').style.display='none';
+
+        // Show TY message
+        document.getElementById('thank-you').style.display ='block';
+    });
+</script>
+
+</html>
+
+<!-- Credits to https://www.w3schools.com/html/html_form_input_types.asp for code for form -->
+<!-- Credits to https://docs.user.com/how-to-create-pop-ups-with-a-thank-you-message/ for Thank You Message popup -->
